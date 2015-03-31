@@ -13,7 +13,53 @@ class Node
 end
 
 class DoubleLinkedList
-  # your code goes here
+  attr_accessor :head
+
+  def initialize(first_node)
+    @head = Node.new(first_node)
+  end
+
+  def set_next
+    
+  end
+
+  def set_prev
+    
+  end
+
+  def has_next?
+    
+  end
+
+  def has_prev?
+    
+  end
+
+  def prepend(element)
+    node = Node.new(element)
+    node.next_node = @head
+    @head.prev_node = node
+
+    # if empty, or if node - if there's only one, the original head becomes the tail
+  end
+
+  def append
+    
+  end
+
+  def insert_after
+    
+  end
+
+  def find
+    
+  end
+
+  def length
+    
+  end
+
+
 end
 
 class EmptyListError < StandardError
